@@ -1,6 +1,6 @@
 const express = require('express');
 require('dotenv').config();
-const swaggerDocs = require('./swagger');
+const swaggerDocs = require('./docs/swagger');
 
 // routes
 const authRoutes = require('./routes/authRoutes');
