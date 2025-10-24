@@ -48,17 +48,22 @@ router.post('/register', authController.register);
  *         application/json:
  *           schema:
  *             type: object
- *             required: [email, password]
+ *             required:
+ *               - email
+ *               - password
  *             properties:
  *               email:
  *                 type: string
+ *                 example: superadmin@gmail.com
  *               password:
  *                 type: string
+ *                 example: 12345678
  *     responses:
  *       200:
  *         description: Login successful
  */
 router.post('/login', authController.login);
+
 
 /**
  * @swagger

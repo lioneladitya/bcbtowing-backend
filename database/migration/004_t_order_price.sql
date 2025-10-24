@@ -13,5 +13,6 @@ CREATE TABLE IF NOT EXISTS t_order_price (
     base_price NUMERIC(15,2) NOT NULL,      -- harga dasar
     insurance_rate NUMERIC(5,4) DEFAULT 0.01, -- 1% dari harga kendaraan
     is_active BOOLEAN DEFAULT TRUE,
+    ADD COLUMN effective_date DATE DEFAULT NOW(),
     created_at TIMESTAMP DEFAULT NOW()
 );
